@@ -1,0 +1,25 @@
+
+NODE:
+- BitNode
+	- controls the operation has holds the log
+
+- Receiver
+	- receives string, put into database
+		- stuff goes into input queue if receiver is busy
+
+- Processor
+	- takes stuff from database and solves the block
+	- puts solved responses into output queue
+
+- Sender
+	- sends info from output queue back to sender
+	- deletes item after confirmed that the info is received
+
+- Manager
+	- queries other nodes for info
+	- once finishes receiving, send confirmation back
+
+- Support
+	- hash
+	- queue
+	- dummy database
