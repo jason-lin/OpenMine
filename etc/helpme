@@ -1,5 +1,5 @@
-./sendto 127.0.0.1 100000 asdgasdgasdgasdg
-./receive 100000
+./sender 127.0.0.1 100000 asdgasdgasdgasdg
+./receiver 100000
 
 
 1. User generates hash from file contents. That is the fileid.

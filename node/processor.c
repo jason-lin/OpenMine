@@ -6,8 +6,11 @@
 int main(int argc, char **argv)
 {
 	//printf("%d", bitHash("asd"));
-	sysLog("bitch");
+	char *test; 
+	popStr(&test, "iQueue");
+	printf(test);
+	
+	//inputLog("apples are awesome");
+	//sysLog("apples are awesome");
 	return 0;
 }
-
-
