@@ -1,0 +1,12 @@
+./sendto 127.0.0.1 100000 asdgasdgasdgasdg
+
+
+./receive 100000
+
+
+1. User generates hash from file contents. That is the fileid.
+2. The file is split into blocks and sent to all nodes in the network.
+DOWLOAD FILE
+1. User queries all nodes with fileid
+2. Nodes return blocks with lbockid
+3. The nodes will store the block id, file id, into storage.
