@@ -14,6 +14,9 @@ void error(const char *msg)
     exit(0);
 }
 
+/*
+open up port Pi
+*/
 int main(int argc, char *argv[])
 {
 	int sock, length, n;
@@ -21,12 +24,8 @@ int main(int argc, char *argv[])
 	struct sockaddr_in server;
 	struct sockaddr_in from;
 	char *buf = (char *) calloc(100, sizeof(char));
-	if (argc < 2) 
-	{
-		fprintf(stderr, "ERROR, no port provided\n");
-		exit(0);
-	}
-   
+	argv[1] = "31415";
+
 	sock = socket(AF_INET, SOCK_DGRAM, 0);
 	if (sock < 0) 
 		error("Opening socket");
@@ -50,4 +49,4 @@ int main(int argc, char *argv[])
         buf = (char *) calloc(100, sizeof(char));
 	}
 	return 0;
- }
+}

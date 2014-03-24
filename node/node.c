@@ -21,6 +21,12 @@ void outputLog (char *message)
 	return;
 }
 
+void ipLog (char *message)
+{
+	writeStr(message, "all_nodes");
+	return;
+}
+
 //writes line at end of file
 void writeStr (char *message, char *file)
 {	
@@ -43,7 +49,7 @@ void writeStr (char *message, char *file)
     }
 
 	fprintf(ftemp, message);
-	fprintf(ftemp, "\n");
+	//fprintf(ftemp, "\n");
 
 	fclose(fp);
 	fclose(ftemp);

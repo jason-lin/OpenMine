@@ -3,7 +3,6 @@
 #include "../support/hash.c"
 #include "node.c"
 
-
 void check()
 {
 	int length;
@@ -56,13 +55,10 @@ void check()
 
 int main(int argc, char **argv)
 {
-
 	while(1)
 	{
 		check();
 	}
 	//printf("%d", bitHash("asd"));
-	//inputLog("apples are awesome");
-	//sysLog("apples are awesome");
 	return 0;
 }
