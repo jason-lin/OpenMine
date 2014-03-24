@@ -21,7 +21,6 @@ void outputLog (char *message)
 	return;
 }
 
-
 //writes line at end of file
 void writeStr (char *message, char *file)
 {	
@@ -58,7 +57,8 @@ void writeStr (char *message, char *file)
 void popStr (char **storage, char *file)
 {
 	int count = 0;
-	char str[80] = "../database/", line[60];
+	char str[80] = "../database/", line[1024];
+	char myline[1024];
 	strcat (str, file);
 
 	FILE *fp, *ftemp;
@@ -71,11 +71,12 @@ void popStr (char **storage, char *file)
     	return;
     }
 
-    while(fgets(line, 60, fp) != NULL)
+    while(fgets(line, 1024, fp) != NULL)
     {
     	if (count == 0)
     	{
-    		*storage = line;
+    		strcpy(myline, line);
+    		*storage = myline;
     	}else
     	{
     		fprintf(ftemp, line);
